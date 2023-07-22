@@ -16,8 +16,7 @@ export class UserController {
 
     try {
       await this.userService.insert(uploadData);
-      console.log("wwwwwwwwwwwww",uploadData);
-      
+      console.log("wwwwwwwwwwwww",uploadData); 
       res.status(HttpStatus.OK).json({
         message:"Excel data inserted succesfully"
       })
@@ -25,9 +24,8 @@ export class UserController {
 
       
     } catch (error) {
-
       res.status(HttpStatus.UNPROCESSABLE_ENTITY).json({
-        message:"404 Error unprocessed "
+        message:error
       })
       
     }

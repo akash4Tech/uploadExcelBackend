@@ -5,14 +5,14 @@ export class User {
     @PrimaryGeneratedColumn()
     id: number;
   
-    @Column()
+    @Column({nullable:true})
     name: string;
   
-    @Column()
+    @Column({nullable:true})
     email: string;
 
-    @Column()
-    phonenumber: number;
+    @Column({nullable:true})
+    phonenumber: string;
     
   
 }
